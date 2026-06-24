@@ -1,8 +1,6 @@
 # Creator Card Microservice
 
-Specification-driven Node.js backend for the Creator Card assessment.
-
-This service implements exactly three public endpoints at the root base URL:
+This service implements three public endpoints at the root base URL:
 
 - `POST /creator-cards`
 - `GET /creator-cards/:slug`
@@ -78,16 +76,6 @@ Open `.env` and set:
 PORT=3000
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>/<database>?retryWrites=true&w=majority
 ```
-
-Where to put it:
-
-- Put it in local `.env` for local development.
-- Put the same key/value in Render environment variables for deployment.
-
-Will it work without breaking anything?
-
-- Yes, as long as `MONGODB_URI` is valid and the Atlas user/network access are configured.
-- Startup is fail-fast by design: if URI is missing/invalid, the app exits immediately so bad configs are caught early.
 
 ## How to Get a Working MongoDB URI (Atlas)
 
@@ -308,6 +296,4 @@ curl "$BASE_URL/creator-cards/ada-designs-things"
 
 ## Submission Notes
 
-- Submit only base URL (for example `https://your-service.onrender.com`).
-- Do not include endpoint path in submission.
-- Do not use `/v1` or `/api/v1`.
+- Base URL: https://creator-cards-backend.onrender.com
